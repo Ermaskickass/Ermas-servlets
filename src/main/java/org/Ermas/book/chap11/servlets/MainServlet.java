@@ -1,4 +1,4 @@
-package org.Ermas.servlets.examples;
+package org.Ermas.book.chap11.servlets;
 
 import java.io.IOException;
 
@@ -8,16 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Hello!")
-public class HelloServlet extends HttpServlet {
-
+@WebServlet("/main")
+public class MainServlet extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String name = "황윤성";
-		
-		request.setAttribute("name", name);
-		
-		request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/main.jsp").forward(request,
+				response);
 	}
 }
